@@ -7,3 +7,4 @@
 		<div id="header">
 			<h1>Photo Gallery: Admin</h1>
 		</div>
+		<div id="main">

@@ -5,9 +5,17 @@
 	defined('SITE_ROOT') ? null : define('SITE_ROOT', 'D:'.DS.'Servers'.DS.'WAMP'.DS.'www'.DS.'photo_gallery');
 	defined('LIB_PATH') ? null : define('LIB_PATH', SITE_ROOT.DS.'includes');
 	
+	# load config file first
 	require_once(LIB_PATH.DS.'config.php');
-	require_once(LIB_PATH.DS.'database.php');
+
+	# load basic functions next so that everything after can use them
 	require_once(LIB_PATH.DS.'functions.php');
-	require_once(LIB_PATH.DS.'session.php');	
+
+	# load core objects
+	require_once(LIB_PATH.DS.'database.php');
+	require_once(LIB_PATH.DS.'session.php');
+	require_once(LIB_PATH.DS.'database_object.php');
+
+	# load database related classes
 	require_once(LIB_PATH.DS.'user.php');
 ?>

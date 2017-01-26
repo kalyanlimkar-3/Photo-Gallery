@@ -1,5 +1,5 @@
 <?php
-	require_once("../../includes/initialize.php");
+	require_once("initialize.php");
 	
 	function strip_zeros_from_date($marked_string = "") {
 		$no_zeros = str_replace("*0", "", $marked_string);

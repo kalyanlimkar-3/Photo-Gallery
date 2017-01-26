@@ -1,9 +1,8 @@
 <?php
-	require_once("../includes/functions.php");
-	require_once("../includes/database.php");
-	//require_once("../includes/user.php");
-	
-	//$user = new User();
+	require_once("../includes/initialize.php");
+
+	include_layout_template('header.php');	
+
 	$user = User::find_by_id(1);
 	echo $user->full_name();
 	
@@ -14,4 +13,6 @@
 		echo $user->username . "<br/>";
 		echo $user->full_name() . "<br/><br/>";
 	}
+
+	include_layout_template('footer.php');
 ?>
